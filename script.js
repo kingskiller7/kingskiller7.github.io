@@ -15,7 +15,7 @@ humanDiv.appendChild(renderer.domElement);
 
 const loader = new THREE.GLTFLoader();
 loader.load(
-  "https://kingskiller7.github.io/64b3c7ae6bc485d4932f4d27.glb",
+  "64b3c7ae6bc485d4932f4d27.glb",
   function (gltf) {
     const human = gltf.scene;
     scene.add(human);
