@@ -5,23 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>TO-DO LIST<img src="images/icon.png"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button onclick="addTask()">Add</button>
-            </div>
+            <h2>To-Do List <img src="images/icon.png" alt="To-Do Icon"></h2>
+            <form id="task-form">
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add your text" required>
+                    <select id="priority-select">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <input type="date" id="due-date">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
             <ul id="list-container">
-                <!-- <li class="checked"></li> -->
+                <!-- Add Task items here -->
             </ul>
+            <button id="clear-completed" class="clear-completed">Clear Completed Tasks</button>
         </div>
     </div>
-    <script src="/index.js"></script>
+
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
